@@ -37,6 +37,6 @@ RUN chown 1000:1000 /nanobot.yaml
 
 ENTRYPOINT ["nanobot"]
 
-CMD ["run", "--listen-address", ":8099", "-e", "WORDPRESS_SITE", "-e", "WORDPRESS_USERNAME", "-e", "WORDPRESS_PASSWORD", "--config", "/nanobot.yaml"]
+CMD ["run", "--exclude-built-in-agents", "--disable-ui", "--listen-address", ":8099", "-e", "WORDPRESS_SITE", "-e", "WORDPRESS_USERNAME", "-e", "WORDPRESS_PASSWORD", "--config", "/nanobot.yaml"]
 
 USER 1000
